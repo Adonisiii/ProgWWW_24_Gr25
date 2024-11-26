@@ -1,0 +1,78 @@
+#nav-container {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: fit-content;
+	margin: 0;
+	padding: 18px 7%;
+	box-sizing: inherit;
+	font-family: 'Roboto', sans-serif;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	z-index: 3;
+}
+
+#tittle::before {
+	content: "Global Charity Foundation";
+}
+
+#tittle {
+	width: max-content;
+	color: #000;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 44px;
+	cursor: pointer;
+	transition: 0.4s ease-out;
+}
+
+#tittle:hover {
+	transform: scale(1.2);
+}
+
+#nav-pages-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	width: fit-content;
+	padding: 16px 20px;
+}
+
+.nav-anchor {
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	color: #525560;
+	font-size: 16px;
+	font-weight: 500;
+	transition: 0.2s ease-out;
+}
+
+.links:hover {
+	transform: scale(1.1);
+}
+
+#donate {
+	padding: 12px 32px;
+	border-radius: 4px;
+	background: #1d2130;
+	font-size: 16px;
+	font-weight: 500;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	border: none;
+}
+
+.active {
+	font-family: 'Roboto', sans-serif;
+	color: #0B0706;
+	font-size: 16px;
+	font-weight: 500;
+	border-bottom: 2px solid #000;
+}
