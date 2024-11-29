@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Events | Global Charity Foundation</title>
+		<link
+			rel="stylesheet"
+			href="resources/css/events.css"
+		/>
+		<link rel="icon" href="resources/images/global/logo.png" type="image/x-icon">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(function () {
+				$('#navbar').load('components/navbar.html');
+				$('#footer').load('components/footer.html');
+			});
+		</script>
+	</head>
+	<body>
+		<div id="navbar"></div>
+
+		<main>
+			<div id="firstDiv">
+				<h1>A day with our wonderful<br />children</h1>
+				<div id="firstDiv1">
+					<p class="location-time"><img src="resources/images/events/LocationPointer.svg" />Prishtinë - Kosovë</p>
+					<p
+						class="location-time"
+						id="firstDiv1-time"
+					>
+						<img src="resources/images/events/Calendar.svg" />24/11/2024 - 9:40 PM
+					</p>
+				</div>
+			</div>
+			<div id="secondDiv">
+				<h2 id="secondDiv-title">About</h2>
+				<p class="paragraph">
+					Step into the enchanting world of "A Day with Our Wonderful Children," an inspiring project crafted by our passionate non-profit
+					organization dedicated to championing the cause of children in need. This extraordinary endeavor seeks not only to provide vital support but
+					also to weave a tapestry of joy and positive experiences for the young souls under our care. As steadfast advocates for their well-being, we
+					believe in the transformative power of creating a day that resonates with laughter, kindness, and unforgettable moments.
+				</p>
+				<p class="paragraph">
+					This exceptional day is meticulously curated to overflow with a myriad of captivating activities tailored to each child's unique interests
+					and aspirations. From immersive workshops and lively games to imaginative arts and crafts sessions, every facet of the event is designed to
+					nurture talents and foster enduring friendships. The dedicated volunteers who form the backbone of our organization are committed to
+					ensuring that "A Day with Our Wonderful Children" transcends the realm of an ordinary event, becoming a profound and uplifting experience
+					that imparts a sense of belonging and empowerment to every child.
+				</p>
+				<img
+					src="resources/images/global/children.jpeg"
+					width="900"
+					height="300"
+				/>
+				<p class="paragraph">
+					More than an isolated event, "A Day with Our Wonderful Children" is a rallying cry for community involvement and collective support. We
+					extend an earnest invitation to local businesses, schools, and individuals to unite with us in bringing this day to fruition. Your
+					invaluable contributions, be they in the form of donations, time, or resources, play a pivotal role in illuminating the lives of these
+					remarkable children. Let us join forces to create an environment that not only nurtures but empowers, laying the groundwork for a future
+					where our wonderful children can flourish and thrive.
+				</p>
+			</div>
+
+			<div id="events-section">
+				<div
+					class="flex flex-align-center"
+					id="event-header"
+				>
+					<p class="events-title">Our Events</p>
+					<div class="events-line"></div>
+				</div>
+				<div id="future-events">
+					<div class="event">
+						<div class="event-date">
+							<p class="event-day">23</p>
+							<p class="event-month">apr</p>
+						</div>
+						<div class="event-info">
+							<div class="top-event">
+								<p>NEXT EVENTS</p>
+								<hr class="event-line" />
+							</div>
+							<div class="event-description">Say no to plastic usage and save the planet</div>
+						</div>
+						<a href="events.html">
+							<button class="next-event">
+								<img
+									src="resources/images/about-us/RightArrow.svg"
+									alt=""
+								/>
+							</button>
+						</a>
+					</div>
+					<div class="event">
+						<div class="event-date">
+							<div class="event-day">30</div>
+							<div class="event-month">apr</div>
+						</div>
+						<div class="event-info">
+							<div class="top-event">
+								<p>NEXT EVENTS</p>
+								<hr class="event-line" />
+							</div>
+							<div class="event-description">Monthly orphanage visits</div>
+						</div>
+						<a href="events.html">
+							<button class="next-event">
+								<img
+									src="resources/images/about-us/RightArrow.svg"
+									alt=""
+								/>
+							</button>
+						</a>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<div id="footer"></div>
+
+		<script>
+			let intervalId = setInterval(() => {
+				let date = new Date();
+				let day = String(date.getDate()).padStart(2, '0');
+				let month = String(date.getMonth() + 1).padStart(2, '0');
+				let year = date.getFullYear();
+
+				let hours = date.getHours();
+				let minutes = String(date.getMinutes()).padStart(2, '0');
+				let ampm = hours >= 12 ? 'PM' : 'AM';
+				hours = hours % 12;
+				hours = hours ? hours : 12;
+
+				let strTime = hours + ':' + minutes + ' ' + ampm;
+				let strDate = day + '/' + month + '/' + year;
+
+				document.getElementById('firstDiv1-time').textContent = strDate + ' - ' + strTime;
+			}, 500);
+		</script>
+	</body>
+</html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="resources/css/global.css">
+    <link rel="stylesheet" href="resources/css/contact-us.css">
+    <link rel="icon" href="resources/images/global/logo.png" type="image/x-icon">
+    <title>Contact Us | Global Charity Foundation</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function() {
+           $("#navbar").load("components/navbar.html", function() {
+            $('#contactUs').addClass('active');
+        });
+           $("#footer").load("components/footer.html");
+        });
+    </script>
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="contact-header">
+        <div class="contact-main">
+            <div class="flex flex-align-center top-news-title">
+                <span class="span-line"></span>
+                <h2 class="section-title-text">
+                    CONTACT US
+                </h2>
+            </div>
+            <div class="contact-text">
+                <h1>
+                    We'd love to hear from you
+                </h1>
+                <p>
+                    Have any question in mind or want to enquire? Please feel free to contact us through the form or the following details.
+                </p>
+            </div>
+        </div>
+        <div class="contact-info">
+            <div class="contact-info-section">
+                <h2>Lets talk!</h2>
+                <div class="flex flex-align-center flex-justify-center" style="gap: 30px;">
+                    <a href="tel:+38344837231">+383 44 837 231</a>
+                    <a href="mailto:contact@global.com">contact@global.com</a>
+                </div>
+            </div>
+            <div class="contact-info-section">
+                <h2>Headoffice</h2>
+                <span>8 Brewery Drive, Lagos, Nigeria.</span>
+            </div>
+            <div class="contact-info-section">
+                <h2>Branch Office</h2>
+                <span>Prishtinë, Kosovë.</span>
+            </div>
+        </div>
+    </div>
+    <div class="contact-form">
+        <form action="https://formspree.io/f/xdorzqer" method="POST">
+            <table class="form-table">
+                <tr class="table-row">
+                    <td>
+                        <div class="flex flex-column">        
+                            <label for="firstname">First Name</label>
+                            <input type="text" id="firstname" name="firstname" required>
+                        </div>                                    
+                    </td>
+                    <td>
+                        <div class="flex flex-column">
+                            <label for="lastname">Last Name</label>
+                            <input type="text" id="lastname" name="lastname" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="table-row">
+                    <td>
+                        <div class="flex flex-column">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="flex flex-column">
+                            <label for="subject">Subject</label>
+                            <input type="subject" id="subject" name="subject">
+                        </div>
+                    </td>
+                </tr>
+                <tr class="third-row">
+                    <td colspan="2">
+                        <div class="flex flex-column">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Type your Message"></textarea>
+                        </div>        
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" value="Send message">
+        </form>
+    </div>
+    <script src="resources/js/formValidator.js"></script>
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.2654190987255!2d21.16064025186334!3d42.65573055057534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13549ee896b552d7%3A0x31bf5e925cb705a3!2sThe%20Faculty%20of%20Mathematics%20and%20Natural%20Sciences!5e0!3m2!1sen!2s!4v1733824870429!5m2!1sen!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
